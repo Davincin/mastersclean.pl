@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+RewriteRule ^home$ index.html
+RewriteRule ^sent$ sent.html
+RewriteRule ^notsent$ notsent.html
+
+

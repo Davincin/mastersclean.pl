@@ -1,0 +1,245 @@
+$dark-font-color: #2c2c2c
+$main-color: #4c89cf
+
+.container
+    width: 90%
+    max-width: 1300px
+    
+.aboutus-one, .offer, .whywe, .opinions
+    padding: 10rem 0
+
+    &__title
+        margin-bottom: 4rem
+        font-size: 3.2rem
+
+    &__icon
+        font-size: 2.8rem
+    
+// HEADER
+.header
+    height: 100vh
+    background-image: url('../img/header_1280.webp')
+    background-position: center 75%
+    
+    &__row
+        align-items: start
+        width: 40%
+        margin-right: auto
+        margin-left: 0
+        text-align: lest
+        
+    &__title
+        font-size: 4.6rem
+        text-align: left
+
+    &__text
+        margin-bottom: 6rem
+        font-size: 2rem
+        text-align: left
+
+    &__btn
+        font-size: 2rem
+
+// NAV        
+.nav
+    height: 10rem
+    
+    &--hidden
+        top: -10rem
+
+    &__logo
+        padding-left: 0
+        font-size: 2.4rem
+
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 100%
+        width: 90%
+        max-width: 1300px
+        
+    &__items
+        position: static
+        display: flex
+        flex-direction: row
+        width: auto
+        height: 100%
+        max-height: 100px
+        padding-bottom: 0
+        opacity: 1
+        visibility: visible
+        
+    &__item
+        display: flex
+        align-items: center
+        width: auto
+        height: 100%
+        padding: 1rem 4rem
+        font-size: 2.2rem
+        transition: font-size .18s, color .25s
+
+        i
+            font-size: 1.8rem
+            transition: color .18s
+
+        &:last-child
+            padding-right: 0
+    
+    &__item:last-child
+        margin-bottom: 0
+
+    &__burger-container
+        display: none
+
+// ABOUTUS
+.aboutus-two
+    height: 40rem
+    background-image: url('../img/aboutus_1280.webp')
+    
+    &__row
+        align-items: start
+        width: 100%
+    
+    &__title
+        font-size: 4rem
+
+    &__text
+        font-size: 2rem
+
+// OFFER
+.offer
+    &__text
+        margin-bottom: 6rem
+    
+    &__cards-row
+        justify-content: space-evenly
+
+    &__card
+        width: 36%
+        height: 40rem
+        border-radius: 1rem
+        overflow: hidden
+
+        &--second
+            display: flex
+
+    &__card-right-icon, &__card-left-icon
+        padding: 4rem 0
+        font-size: 4rem
+        color: $dark-font-color
+
+        &:hover
+            color: $main-color
+
+    &__card-right-icon
+        right: 2rem
+
+    &__card-left-icon   
+        left: 2rem
+
+    &__btn
+        margin-top: 5rem
+
+// WHYWE
+.whywe
+    
+    &__text
+        margin-bottom: 8rem
+        
+    &__cards-row
+        justify-content: space-between
+        padding: 0 1rem
+
+    &__card
+        width: 26%
+        padding: 8rem 3rem
+        transition: transform .3s
+
+        &:hover
+            transform: scale(.98)
+
+    &__card-icon
+        margin-bottom: 2rem
+        font-size: 6rem
+    
+    &__card-title
+        font-size: 2.8rem
+
+// OPINIONS
+.opinions
+    
+    &__text
+        margin-bottom: 8rem
+        
+    &__card
+        padding: 7rem 0
+    
+    &__card-text
+        max-width: 100rem
+
+    &__card-img
+        width: 36rem
+        margin-bottom: 6rem
+        
+// CONTACT
+.contact
+    &__row
+        flex-wrap: nowrap
+        
+    &__info, &__message
+        width: 50%
+        
+        .container
+            align-items: center
+            width: 68%
+            max-width: 650px
+            padding: 10rem 0
+    
+    &__info
+        .container
+            justify-content: center
+            margin-right: 0
+            margin-left: auto
+            padding-right: 5rem
+            
+    &__info-title
+        font-size: 4.4rem
+        
+    &__info-text
+        margin-bottom: 5rem
+        font-size: 1.8rem
+
+    &__info-item
+        margin-bottom: 1.4rem
+        font-size: 1.8rem
+        
+    &__info-call
+        font-size: 1.8rem
+
+    &__message
+        .container
+            margin-left: 0
+            padding-left: 5rem
+            
+    &__message-title
+        font-size: 3.4rem
+    
+    &__form-row
+        width: 80%
+        
+    &__submit-btn
+        margin-top: 3rem
+
+// FOOTER
+.footer
+
+    &__row
+        flex-wrap: wrap
+
+    p
+        width: 50%
+
+// MESSAGE
+.message
+    background-image: url('../img/header_1280.webp')

@@ -1,0 +1,615 @@
+$main-color: #4c89cf
+$lightblue-color: #b3dbfa
+$hover-btn-color: #234769
+$dark-font-color: #2c2c2c
+$light-font-color: #fff
+    
+*, *::after, *::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+body
+    font-size: 1.6rem
+    color: $dark-font-color
+    font-family: 'Poppins', sans-serif
+
+.container
+    width: 82%
+    height: 100%
+    max-width: 1400px
+    margin: 0 auto
+    text-align: center
+    overflow: hidden
+
+.sticky-body
+    overflow: hidden
+
+.blue-color
+    color: $lightblue-color
+
+.hero-shadow
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, .5)
+    z-index: -10
+
+.header__btn, .aboutus-one__btn, .offer__btn, .contact__submit-btn, .contact__info-call
+    display: block
+    padding: 1.2rem 2.4rem
+    color: #fff
+    text-decoration: none
+    background-color: $main-color
+    border: none
+    border-radius: .8rem
+    transition: background-color .3s
+
+    &:hover
+            background-color: $hover-btn-color
+
+// HEADER
+.header
+    position: relative
+    height: 100%
+    height: 90vh
+    color: $light-font-color
+    background-image: url('../img/header_640.webp')
+    background-size: cover
+    background-position: center 70%
+    z-index: 5
+
+    .hero-shadow
+        background-color: rgba(0, 0, 0, .36)
+        
+    .container
+        height: 100%
+        padding-top: 5rem
+
+    &__row
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 100%
+        
+    &__title
+        margin-bottom: 2rem
+        font-size: 3rem
+        opacity: 0
+        animation: fadeInGrow 1s forwards
+        animation-delay: .2s
+        
+    &__text
+        margin-bottom: 6rem
+        opacity: 0
+        animation: fadeInGrow 1s forwards
+        animation-delay: .4s
+     
+    &__btn
+        margin-top: 4rem
+        padding: 1.4rem 5rem
+        font-size: 1.8rem
+        color: #1363B7
+        font-weight: bold
+        opacity: 0
+        background-color: white
+        animation: fadeInGrow 1s forwards
+        animation-delay: .6s
+        transition: color .5s
+
+        &:hover
+            color:#f6f6f6
+            background-color: $hover-btn-color
+
+// NAV
+.nav
+    position: fixed
+    top: 0
+    width: 100%
+    height: 8rem
+    color: $light-font-color
+    background-color: #255685
+    transition: background-color .25s, top .35s
+    z-index: 100
+
+    &--hidden
+        top: -8rem
+
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 100%
+        width: 100%
+        max-width: 2000px
+        margin: 0 auto
+        
+    &__logo
+        display: flex
+        align-items: center
+        height: 100%
+        margin: 0
+        padding-left: 3rem
+        font-size: 2rem
+    
+    &__burger-container
+        position: relative
+        padding-right: 2.4rem
+        z-index: 10
+
+        .hamburger
+                .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+                    background-color: white
+                    
+    &__items
+        position: absolute
+        top: 8rem
+        display: flex
+        flex-direction: column
+        align-items: start
+        width: 100vw
+        height: auto
+        margin: 0
+        padding-left: 2rem
+        padding-bottom: 2rem
+        overflow: hidden
+        background-color: #255685
+        visibility: hidden
+        opacity: 0
+        transition: visibility .35s, opacity .35s
+        z-index: 1
+
+    &--open
+        visibility: visible
+        opacity: 1
+        
+    &__item
+        position: relative
+        margin: 0
+        padding: 2rem 2rem
+        font-size: 1.8rem
+        font-weight: 500
+        text-align: left
+        color: white
+        text-decoration: none
+        transition: color .3s, font-weight .3s
+
+        &::last-child
+            margin-bottom: 2rem
+
+        &:hover
+            color: #e0d868
+         
+        &--active
+            color: #e0d868
+            font-weight: 500
+            
+@media screen and ( max-width: 310px)
+    .nav__logo
+        font-size: 2rem
+
+    .header__row
+        p
+            font-size: 2rem
+
+.aboutus-one, .offer, .whywe, .opinions
+    padding: 5rem 0
+
+    &__title
+        font-size: 2.8rem
+        margin-bottom: 2rem
+
+    &__icon
+        font-size: 2.4rem
+        color: $main-color
+
+    &__text
+        margin-bottom: 4rem
+
+    &__row
+        display: flex
+        flex-direction: column
+        align-items: center
+
+// ABOUTUS
+.aboutus
+    position: relative
+    padding-bottom: 0
+    z-index: 2
+
+.aboutus-one
+    &__btn
+        
+        i
+            padding-left: .6rem
+
+.aboutus-two
+    position: relative
+    height: 30rem
+    color: $light-font-color
+    background-image: url('../img/aboutus_640.webp')
+    background-size: cover
+    background-position: center
+    z-index: 0
+
+    .hero-shadow
+       background-color: rgba(0, 0, 0, .65)
+        
+
+    &__row
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 100%
+
+    &__title
+        font-size: 3rem
+    
+// OFERTA
+.offer
+    position: relative
+    
+    &__text
+        width: 82%
+        
+    .container
+        width: 100%
+        
+    &__cards-row
+        position: relative
+        display: flex
+        width: 100%
+        margin-bottom: 4rem
+
+    &__card
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 32rem
+        width: 100%
+        color: $light-font-color
+        
+        &--second
+            display: none
+
+        .hero-shadow
+            background-color: rgba(0, 0, 0, .7)
+            z-index: 2
+
+    &__card-img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        transition: opacity .3s
+        transition-delay: 0.2s
+        z-index: 0
+        
+    &__card-title
+        width: 60%
+        margin-top: 2rem
+        margin-bottom: 3rem
+        font-size: 2.4rem
+        transition: opacity .1s
+        z-index: 2
+        
+    &__card-text
+        width: 60%
+        transition: opacity .1s
+        z-index: 6
+    
+    &__card-right-icon, &__card-left-icon
+        position: absolute
+        top: 50%
+        padding: 4rem 1rem
+        font-size: 3rem
+        color: $light-font-color
+        cursor: pointer
+        transform: translateY(-50%)
+        transition: color .3s
+        z-index: 6
+
+        &:active
+            color: $main-color
+    
+    &__card-right-icon
+        right: 1rem
+
+    &__card-left-icon
+        left: 1rem
+
+// DLACZEGO MY
+.whywe
+    background-color: #f5f5f5
+
+    &__text
+        margin-bottom: 6rem
+        
+    &__cards-row
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        width: 100%
+        padding: 0 .5rem
+       
+    &__card
+        display: flex
+        flex-direction: column
+        align-items: start
+        width: 95%
+        margin-bottom: 4rem
+        padding: 3rem 2rem
+        text-align: left
+        color: $dark-font-color
+        border-radius: 1rem
+        box-shadow: 0px 0px 20px -6px rgba(66, 68, 90, .41)
+        
+        &--blue
+            color: $light-font-color
+            background-color: $main-color
+
+            i
+                color: #fff
+
+    &__card-icon
+        margin-bottom: 1rem
+        font-size: 3rem
+        color: $main-color
+
+    &__card-title
+        margin-bottom: 1rem
+        font-size: 2.2rem
+
+// OPINIONS
+.opinions
+    
+    &__text
+        margin-bottom: 6rem
+
+    &__card
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 3rem 0
+        border-bottom: 1px solid #a1a1a17e
+        border-top: 1px solid #a1a1a17e
+
+    &__card-text
+        font-style: italic
+
+    &__card-img
+        width: 70%
+        margin-bottom: 2rem
+        object-fit: cover
+
+// CONTACT
+.contact
+    position: relative
+    color: $light-font-color
+
+    &__row
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+    
+    &__info, &__message
+        width: 100%
+        
+        .container
+            display: flex
+            flex-direction: column
+            padding: 5rem 0
+            
+    &__info
+        position: relative
+        background-image: url('../img/contact_640.webp')
+        background-position: center
+        background-size: cover
+        z-index: 1
+
+        .container
+            text-align: left
+
+        .hero-shadow
+            background-color: rgba(0, 0, 0, .5)
+            
+    &__info-title
+        font-size: 3.4rem
+
+    &__info-text
+        margin-bottom: 4rem
+
+    &__info-item
+        margin-bottom: 1rem
+        
+        i
+            padding-right: 1rem  
+    
+    &__info-call
+        margin-top: 3rem
+        font-size: 1.8rem
+        text-align: center
+        
+        i
+            padding-right: 1rem
+
+    &__message
+        background-color: #171717
+
+        .container
+            text-align: center
+
+    &__message-title
+        font-size: 2.8rem
+        
+    &__message-text
+        margin-bottom: 4rem
+    
+    &__form-row
+        display: flex
+        flex-direction: column
+        width: 100%
+        
+    &__form-group
+        width: 100%
+        margin-bottom: 1rem
+        text-align: left
+
+        label
+            width: 100%
+            margin-bottom: 1rem
+            font-size: 1.7rem
+
+        input, textarea
+            width: 100%
+            margin-bottom: 1rem
+            margin-top: 0.5rem
+            padding: 0.6rem
+            color: $light-font-color
+            background-color: transparent
+            outline: none
+            border: none
+            border-bottom: 1px solid #c1c7ca
+            transition: border .3s, background-color .3s
+
+            &:focus, &:active
+                border-bottom-color: $lightblue-color 
+                background-color: #161b24
+
+        textarea
+            max-width: 100%
+
+    &__submit-btn
+        margin-top: 4rem
+        font-size: 1.8rem
+        outline: none
+        cursor: pointer
+        
+// FOOTER
+.footer
+    width: 100%
+    padding: 2rem 0
+    color: $light-font-color
+    background-color: #111213
+    
+
+    &__row
+        display: flex
+        justify-content: space-around
+        align-items: center
+        flex-wrap: wrap
+        height: 100%
+        width: 100%
+
+    p
+        padding: 1rem 0
+        width: 100%
+
+    a
+        position: relative
+        color: $lightblue-color
+        text-decoration: none
+        z-index: 0
+        transition: color .3s
+        
+        &:hover
+            color: $main-color
+
+// MESSAGE
+.message
+    position: relative
+    height: 100%
+    height: 100vh
+    color: $light-font-color
+    background-image: url('../img/header_640.webp')
+    background-size: cover
+    background-position: center 70%
+    z-index: 5
+
+    &__hero-shadow
+        position: absolute
+        height: 100%
+        width: 100%
+        background-color: rgba(0, 0, 0, .36)
+        z-index: -10
+
+    .container
+        height: 100%
+        padding-top: 5rem
+
+    &__row
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 100%
+        
+    &__icon
+        margin-bottom: 2rem
+        font-size: 4rem
+
+    &__title
+        margin-bottom: 2rem
+        font-size: 2.4rem
+        color: #f6f6f6
+
+    &__link
+        padding: 1.2rem 2rem
+        font-size: 1.6rem
+        border: none
+        color: #1363B7
+        text-decoration: none
+        font-weight: bold
+        background-color: white
+        border-radius: .8rem
+        transition: color .5s, background-color .3s
+
+        i
+            padding-right: 1rem
+
+        &:hover
+            color:#f6f6f6
+            background-color: $hover-btn-color
+
+.transparent
+    opacity: 0
+
+.os
+    position: relative
+    opacity: 0
+    visibility: hidden
+    overflow: hidden
+    
+.os--active
+        animation: fadeIn forwards
+        animation-duration: 1s
+        animation-delay: .2s
+        animation-timing-function: ease-out
+
+@keyframes fadeIn
+    0%
+        opacity: 0
+        
+    100%
+        opacity: 1
+        visibility: visible
+        
+@keyframes fadeInGrow
+    0%
+        opacity: 0
+        transform: scale(0)
+    100%
+        opacity: 1
+        transform: scale(1)
+        
+
+        
